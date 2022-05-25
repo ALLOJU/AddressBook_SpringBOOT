@@ -8,38 +8,43 @@ import java.util.ArrayList;
 import java.util.List;
 @Service
 public class AddressBookService implements IAddressBookService {
+
+    List<Contact> contactList = new ArrayList<>();
     @Override
     public List<Contact> getContact() {
-        List<Contact> contactList = new ArrayList<>();
-        contactList.add(new Contact(1,
-                new ContactDTO("Mounika", "Alloju", "Girmajipet", "TelangANA", "Warangal", "506002", "9705444616")));
-        System.out.println(contactList.toString());
 
         return contactList;
     }
 
     @Override
     public Contact getContactById(int contactId) {
-        Contact contact = new Contact(1,
-                new ContactDTO("Ramesh", "Sripadi", "girmajipet", "telangana", "warangal", "506002", "9866349586"));
-        return contact;
+        return contactList.get(contactId - 1);
     }
 
     @Override
     public Contact createContact(ContactDTO contactDTO) {
-        Contact contact = new Contact(1, contactDTO);
-        return contact;
+        List<Contact> contactData = this.getContact();
+        contactList.add( new Contact(contactData.size() + 1, contactDTO));
+        return contactList.get(contactList.size() - 1);
     }
 
     @Override
     public Contact updateContact(int contactId, ContactDTO contactDTO) {
-        Contact contact = new Contact(1, contactDTO);
+        Contact contact = this.getContactById(contactId);
+        contact.setFirstName(contactDTO.getFirstName());
+        contact.setLastName(contactDTO.getLastName());
+        contact.setAddress(contactDTO.getAddress());
+        contact.setState(contactDTO.getState());
+        contact.setCity(contactDTO.getCity());
+        contact.setZip(contactDTO.getZip());
+        contact.setPhone(contactDTO.getPhone());
+        contactList.set(contactId - 1, contact);
         return contact;
     }
 
     @Override
     public void deleteContact(int contactId) {
-        // TODO Auto-generated method stub
+        contactList.remove(contactId-1);
 
     }
 }
