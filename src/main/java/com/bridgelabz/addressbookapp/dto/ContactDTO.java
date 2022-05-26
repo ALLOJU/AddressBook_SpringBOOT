@@ -13,7 +13,7 @@ public @Data class ContactDTO {
     @NotEmpty(message = "last name cannot be null")
     public String lastName;
     @Pattern(regexp = "^[A-Za-z,.0-9]{3,}$", message = "Address is Invalid!!! ")
-    @NotEmpty(message = "Address cannot be null")
+    @NotEmpty(message = "Address cannot be empty")
     public String address;
     @Pattern(regexp = "^[A-Za-z,.0-9]{3,}$", message = "State is Invalid!!! ")
     @NotEmpty(message = "State cannot be null")
