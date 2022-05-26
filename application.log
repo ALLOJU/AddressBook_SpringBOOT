@@ -1,0 +1,19 @@
+2022-05-26 10:11:13.924  INFO 16104 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.2 on DESKTOP-4ORA393 with PID 16104 (C:\Users\nani\Documents\SpringBoot\AddressBookApp\target\classes started by nani in C:\Users\nani\Documents\SpringBoot\AddressBookApp)
+2022-05-26 10:11:13.927 DEBUG 16104 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-26 10:11:13.928  INFO 16104 --- [restartedMain] c.b.a.AddressBookAppApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 10:11:16.490  WARN 16104 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-05-26 10:11:17.907  WARN 16104 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 10:11:18.614  INFO 16104 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 5.368 seconds (JVM running for 6.496)
+2022-05-26 10:11:18.618  INFO 16104 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App Started in null Environment
+2022-05-26 10:11:18.619  INFO 16104 --- [restartedMain] c.b.a.AddressBookAppApplication          : AddressBook App DB User is root
+2022-05-26 10:22:25.906  INFO 15904 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.2 on DESKTOP-4ORA393 with PID 15904 (C:\Users\nani\Documents\SpringBoot\AddressBookApp\target\classes started by nani in C:\Users\nani\Documents\SpringBoot\AddressBookApp)
+2022-05-26 10:22:25.908 DEBUG 15904 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-26 10:22:25.909  INFO 15904 --- [restartedMain] c.b.a.AddressBookAppApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 10:22:30.378  WARN 15904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 10:22:30.953  INFO 15904 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 5.654 seconds (JVM running for 6.731)
+2022-05-26 10:22:36.836  INFO 800 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 17.0.2 on DESKTOP-4ORA393 with PID 800 (C:\Users\nani\Documents\SpringBoot\AddressBookApp\target\classes started by nani in C:\Users\nani\Documents\SpringBoot\AddressBookApp)
+2022-05-26 10:22:36.837 DEBUG 800 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-26 10:22:36.838  INFO 800 --- [restartedMain] c.b.a.AddressBookAppApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 10:22:39.937  WARN 800 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 10:22:40.335  INFO 800 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 4.031 seconds (JVM running for 5.05)
+2022-05-26 11:38:23.935  WARN 800 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m14s129ms28µs300ns).
