@@ -18,14 +18,16 @@ public class AddressBookService implements IAddressBookService {
 
     @Override
     public Contact getContactById(int contactId) {
-        return contactList.get(contactId - 1);
+        return contactList.get(contactId-1);
     }
 
     @Override
     public Contact createContact(ContactDTO contactDTO) {
-        List<Contact> contactData = this.getContact();
-        contactList.add( new Contact(contactData.size() + 1, contactDTO));
-        return contactList.get(contactList.size() - 1);
+
+        Contact contact=null;
+        contact=new Contact(contactList.size()+1,contactDTO);
+        contactList.add(contact);
+        return contact;
     }
 
     @Override
