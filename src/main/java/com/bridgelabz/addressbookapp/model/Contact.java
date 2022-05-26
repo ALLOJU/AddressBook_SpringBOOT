@@ -3,17 +3,31 @@ package com.bridgelabz.addressbookapp.model;
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
 import lombok.Data;
 
-@Data
-public class Contact {
-    private int contactId;
-    private String firstName;
-    private String lastName;
-    private String address;
-    private String state;
-    private String city;
-    private String zip;
-    private String phone;
+import javax.persistence.*;
 
+
+@Entity
+@Table(name="addressbook_table")
+public @Data class Contact {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Contact_Id")
+    private int contactId;
+    @Column(name = "First_Name")
+    private String firstName;
+    @Column(name = "Last_Name")
+    private String lastName;
+    @Column(name = "address")
+    private String address;
+    @Column(name = "state")
+    private String state;
+    @Column(name = "city")
+    private String city;
+    @Column(name = "zip")
+    private String zip;
+    @Column(name = "phone")
+    private String phone;
+    @Column(name = "email")
     private String email;
 
 
@@ -31,6 +45,9 @@ public class Contact {
 
     }
 
+    public Contact() {
+
+    }
 
     @Override
     public String toString() {
