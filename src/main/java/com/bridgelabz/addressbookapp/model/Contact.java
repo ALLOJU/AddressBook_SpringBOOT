@@ -54,4 +54,15 @@ public @Data class Contact {
         return "Contact [contactId=" + contactId + ", firstName=" + firstName + ", lastName=" + lastName + ", address="
                 + address + ", state=" + state + ", city=" + city + ", zip=" + zip + ", phone=" + phone + "]";
     }
+
+    public void updateContact(ContactDTO contactDTO) {
+        this.firstName = contactDTO.firstName;
+        this.lastName = contactDTO.lastName;
+        this.address = contactDTO.address;
+        this.city = contactDTO.city;
+        this.state = contactDTO.state;
+        this.zip = contactDTO.zip;
+        this.phone = contactDTO.phone;
+        this.email=contactDTO.email;
+    }
 }
