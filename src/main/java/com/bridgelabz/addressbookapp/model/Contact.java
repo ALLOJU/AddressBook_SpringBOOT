@@ -14,6 +14,8 @@ public class Contact {
     private String zip;
     private String phone;
 
+    private String email;
+
 
     public Contact(int contactId, ContactDTO contactDTO) {
         super();
@@ -25,6 +27,8 @@ public class Contact {
         this.city = contactDTO.city;
         this.zip = contactDTO.zip;
         this.phone = contactDTO.phone;
+        this.email=contactDTO.email;
+
     }
 
 
