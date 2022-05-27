@@ -15,4 +15,6 @@ public interface IAddressBookService {
     Contact createContact(ContactDTO contactDTO);
 
     Contact getContactById(int contactId);
+
+    List<Contact> getContactByCity(String city);
 }

@@ -62,4 +62,11 @@ public class AddressBookController {
         return new ResponseEntity<ResponseDTO>(response, HttpStatus.OK);
 
     }
+    @GetMapping("/city/{city}")
+    public ResponseEntity<ResponseDTO> getContactByCity(@PathVariable String city) {
+        List<Contact> contactList = null;
+        contactList = addressbookservice.getContactByCity(city);
+        ResponseDTO response = new ResponseDTO("Get Call Contact List By city is Successful", contactList);
+        return new ResponseEntity<ResponseDTO>(response, HttpStatus.OK);
+    }
 }

@@ -32,6 +32,11 @@ public class AddressBookService implements IAddressBookService {
     }
 
     @Override
+    public List<Contact> getContactByCity(String city) {
+        return addressBookRepository.findContactListByCity(city);
+    }
+
+    @Override
     public Contact createContact(ContactDTO contactDTO) {
 
             Contact contactData = new Contact(contactList.size()+1, contactDTO);
