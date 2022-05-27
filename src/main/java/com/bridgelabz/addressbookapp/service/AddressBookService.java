@@ -14,8 +14,7 @@ public class AddressBookService implements IAddressBookService {
 
     @Autowired
     private AddressBookRepository addressBookRepository;
-
-    List<Contact> contactList = new ArrayList<>();
+    // List<Contact> contactList = new ArrayList<>();
     @Override
     public List<Contact> getContact() {
 
@@ -37,10 +36,20 @@ public class AddressBookService implements IAddressBookService {
     }
 
     @Override
+    public List<Contact> sortByCity() {
+        return addressBookRepository.sortByCity();
+    }
+
+    @Override
+    public List<Contact> sortByState() {
+        return addressBookRepository.sortByState();
+    }
+
+    @Override
     public Contact createContact(ContactDTO contactDTO) {
 
-            Contact contactData = new Contact(contactList.size()+1, contactDTO);
-            contactList.add(contactData);
+            Contact contactData = new Contact(contactDTO);
+            //contactList.add(contactData);
             return addressBookRepository.save(contactData);
 
     }

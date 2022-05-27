@@ -11,4 +11,10 @@ import java.util.List;
 public interface AddressBookRepository extends JpaRepository<Contact, Integer> {
     @Query(value = "select * from addressbook_table where city= :city", nativeQuery = true)
     List<Contact> findContactListByCity(String city);
+
+    @Query(value = "select * from addressbook_table order by city", nativeQuery = true)
+    List<Contact> sortByCity();
+
+    @Query(value="select * from addressbook_table order by state",nativeQuery = true)
+    List<Contact> sortByState();
 }

@@ -31,9 +31,9 @@ public @Data class Contact {
     private String email;
 
 
-    public Contact(int contactId, ContactDTO contactDTO) {
+    public Contact(ContactDTO contactDTO) {
         super();
-        this.contactId = contactId;
+
         this.firstName = contactDTO.firstName;
         this.lastName = contactDTO.lastName;
         this.address = contactDTO.address;
@@ -48,13 +48,6 @@ public @Data class Contact {
     public Contact() {
 
     }
-
-    @Override
-    public String toString() {
-        return "Contact [contactId=" + contactId + ", firstName=" + firstName + ", lastName=" + lastName + ", address="
-                + address + ", state=" + state + ", city=" + city + ", zip=" + zip + ", phone=" + phone + "]";
-    }
-
     public void updateContact(ContactDTO contactDTO) {
         this.firstName = contactDTO.firstName;
         this.lastName = contactDTO.lastName;
